@@ -1,3 +1,8 @@
 <Solution>
-  <Project Path="WithoutCaching/WithoutCaching.csproj" />
+  <Folder Name="/WithoutCaching/">
+    <Project Path="WithoutCachingAPI/WithoutCachingAPI.csproj" />
+    <Project Path="WithoutCachingApplication/WithoutCachingApplication.csproj" />
+    <Project Path="WithoutCachingDomain/WithoutCachingDomain.csproj" />
+    <Project Path="WithoutCachingInfrastructure/WithoutCachingInfrastructure.csproj" />
+  </Folder>
 </Solution>

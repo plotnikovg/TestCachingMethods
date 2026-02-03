@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "nAxESDFm45k=",
+  "dgSpecHash": "eBbuDg8h7p0=",
   "success": true,
-  "projectFilePath": "C:\\Users\\mrgri\\RiderProjects\\TestCachingMethods\\WithoutCaching\\WithoutCaching.csproj",
+  "projectFilePath": "C:\\Users\\mrgri\\RiderProjects\\TestCachingMethods\\WithoutCachingAPI\\WithoutCachingAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mrgri\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.10\\microsoft.aspnetcore.openapi.9.0.10.nupkg.sha512",
     "C:\\Users\\mrgri\\.nuget\\packages\\microsoft.openapi\\1.6.17\\microsoft.openapi.1.6.17.nupkg.sha512",

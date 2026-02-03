@@ -81,11 +81,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mrgri\\RiderProjects\\TestCachingMethods\\WithoutCaching\\WithoutCaching.csproj",
-      "projectName": "WithoutCaching",
-      "projectPath": "C:\\Users\\mrgri\\RiderProjects\\TestCachingMethods\\WithoutCaching\\WithoutCaching.csproj",
+      "projectUniqueName": "C:\\Users\\mrgri\\RiderProjects\\TestCachingMethods\\WithoutCachingAPI\\WithoutCachingAPI.csproj",
+      "projectName": "WithoutCachingAPI",
+      "projectPath": "C:\\Users\\mrgri\\RiderProjects\\TestCachingMethods\\WithoutCachingAPI\\WithoutCachingAPI.csproj",
       "packagesPath": "C:\\Users\\mrgri\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mrgri\\RiderProjects\\TestCachingMethods\\WithoutCaching\\obj\\",
+      "outputPath": "C:\\Users\\mrgri\\RiderProjects\\TestCachingMethods\\WithoutCachingAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -1,4 +1,4 @@
-namespace WithoutCaching;
+namespace WithoutCachingAPI;
 
 public class WeatherForecast
 {

@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace WithoutCaching.Controllers;
+namespace WithoutCachingAPI.Controllers;
 
 [ApiController]
 [Route("[controller]")]
