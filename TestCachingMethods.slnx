@@ -1,4 +1,5 @@
 <Solution>
+  <Folder Name="/te/" />
   <Folder Name="/WithoutCaching/">
     <Project Path="WithoutCachingAPI/WithoutCachingAPI.csproj" />
     <Project Path="WithoutCachingApplication/WithoutCachingApplication.csproj" />
