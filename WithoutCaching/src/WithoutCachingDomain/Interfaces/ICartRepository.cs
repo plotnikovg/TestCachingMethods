@@ -8,4 +8,5 @@ public interface ICartRepository
     void AddProduct(Cart cart);
     void Update(Cart cart);
     void Delete(Cart cart);
+    void Save();
 }
