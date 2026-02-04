@@ -1,9 +1,10 @@
 <Solution>
-  <Folder Name="/te/" />
-  <Folder Name="/WithoutCaching/">
-    <Project Path="WithoutCachingAPI/WithoutCachingAPI.csproj" />
-    <Project Path="WithoutCachingApplication/WithoutCachingApplication.csproj" />
-    <Project Path="WithoutCachingDomain/WithoutCachingDomain.csproj" />
-    <Project Path="WithoutCachingInfrastructure/WithoutCachingInfrastructure.csproj" />
+  <Folder Name="/CA/" />
+  <Folder Name="/WithoutCaching/" />
+  <Folder Name="/WithoutCaching/src/">
+    <Project Path="WithoutCaching/src/WithoutCachingAPI/WithoutCachingAPI.csproj" />
+    <Project Path="WithoutCaching/src/WithoutCachingApplication/WithoutCachingApplication.csproj" />
+    <Project Path="WithoutCaching/src/WithoutCachingDomain/WithoutCachingDomain.csproj" />
+    <Project Path="WithoutCaching/src/WithoutCachingInfrastructure/WithoutCachingInfrastructure.csproj" />
   </Folder>
 </Solution>
