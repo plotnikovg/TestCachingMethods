@@ -7,7 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Carts\" />
+    <Folder Include="Categories\" />
     <Folder Include="Common\" />
+    <Folder Include="Products\" />
   </ItemGroup>
 
 </Project>
