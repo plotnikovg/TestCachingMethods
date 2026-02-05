@@ -13,11 +13,22 @@ public class ProductRepository : IProductRepository
         _context = context;
     }
 
-    public async Task<IEnumerable<Product>> GetProductsRangeByIdAsync(int firstId, int lastId)
+    public async Task<IEnumerable<Product>> GetProductsRangeByIdAsync(int? categoryId, int firstId, int lastId)
     {
+        if (categoryId == null)
+        {
+            return await _context.Products
+                .Where(p => p.Id >= firstId && p.Id <= lastId)
+                .ToListAsync();
+        }
+
         return await _context.Products
-            .Where(p => p.Id >= firstId && p.Id <= lastId)
+            .Where(p => p.Id == categoryId)
+            .OrderBy(p => p.Id)
+            .Skip(firstId)
+            .Take(lastId - firstId + 1)
             .ToListAsync();
+
     }
 
     public async Task<Product?> GetProductByIdAsync(int id)
