@@ -10,7 +10,8 @@
     <Folder Include="Carts\" />
     <Folder Include="Categories\" />
     <Folder Include="Common\" />
-    <Folder Include="Products\" />
+    <Folder Include="Products\DTOs\" />
+    <Folder Include="Products\Queries\" />
   </ItemGroup>
 
   <ItemGroup>
