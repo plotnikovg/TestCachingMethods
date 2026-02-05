@@ -8,7 +8,6 @@
 
   <ItemGroup>
     <Folder Include="Carts\" />
-    <Folder Include="Categories\DTOs\" />
     <Folder Include="Categories\Queries\" />
     <Folder Include="Common\" />
   </ItemGroup>
