@@ -6,14 +6,7 @@ namespace WithoutCachingApplication.Categories.Queries;
 
 public sealed record GetAllCategoriesQuery : IRequest<List<CategoryDto>>
 {
-    public int CategoryId { get; init; }
-    public string? Name { get; init; }
-
-    public GetAllCategoriesQuery(int categoryId, string? name)
-    {
-        CategoryId = categoryId;
-        Name = name;
-    }
+    
 }
 
 public class GetAllCategoriesQueryHandler : IRequestHandler<GetAllCategoriesQuery, List<CategoryDto>>
