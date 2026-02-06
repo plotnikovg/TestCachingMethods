@@ -4,7 +4,8 @@ using WithoutCachingApplication.Categories.Queries;
 
 namespace WithoutCachingAPI.Controllers;
 
-public class CategoryController : Controller
+[ApiController]
+public class CategoryController : ControllerBase
 {
     private readonly ILogger<CategoryController> _logger;
     private readonly ISender _mediator;
