@@ -23,9 +23,9 @@ public class ProductRepository : IProductRepository
         }
 
         return await _context.Products
-            .Where(p => p.Id == categoryId)
+            .Where(p => p.CategoryId == categoryId)
             .OrderBy(p => p.Id)
-            .Skip(firstId)
+            .Skip(firstId - 1)
             .Take(lastId - firstId + 1)
             .ToListAsync();
 
