@@ -34,7 +34,7 @@ public class ProductController : ControllerBase
 
     [HttpGet]
     [Route("Get")]
-    [ProducesResponseType(typeof(ProductDto), StatusCodes.Status201Created)]
+    [ProducesResponseType(typeof(ProductDto), StatusCodes.Status200OK)]
     public async Task<IActionResult> GetProduct([FromQuery] int id)
     {
         _logger.LogInformation("GetProduct called");
