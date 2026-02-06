@@ -9,6 +9,13 @@ public sealed record GetProductsQuery : IRequest<List<ProductForListDto>>
     public int CategoryId { get; init; }
     public int FirstProductNumber { get; init; }
     public int LastProductNumber { get; init; }
+
+    public GetProductsQuery(int? categoryId, int firstProductNumber, int lastProductNumber)
+    {
+        CategoryId = categoryId ?? 0;
+        FirstProductNumber = firstProductNumber;
+        LastProductNumber = lastProductNumber;
+    }
 }
 
 public class GetProductsQueryHandler : IRequestHandler<GetProductsQuery, List<ProductForListDto>>

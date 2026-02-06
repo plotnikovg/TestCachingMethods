@@ -8,6 +8,11 @@ namespace WithoutCachingApplication.Products.Queries;
 public sealed record GetProductQuery : IRequest<ProductDto>
 {
     public int ProductId { get; init; }
+
+    public GetProductQuery(int productId)
+    {
+        ProductId = productId;
+    }
 }
 
 public class GetProductQueryHandler : IRequestHandler<GetProductQuery, ProductDto>
