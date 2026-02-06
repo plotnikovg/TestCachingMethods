@@ -17,6 +17,7 @@ public class ProductController : Controller
     }
 
     [HttpGet]
+    [Route("api/[controller]/GetRange")]
     public async Task<IActionResult> GetProducts([FromQuery] int? categoryId, 
         [FromQuery] int firstProductNumber, [FromQuery] int lastProductNumber)
     {
@@ -26,6 +27,7 @@ public class ProductController : Controller
     }
 
     [HttpGet]
+    [Route("api/[controller]/Get")]
     public async Task<IActionResult> GetProduct([FromQuery] int id)
     {
         _logger.LogInformation("GetProduct called");

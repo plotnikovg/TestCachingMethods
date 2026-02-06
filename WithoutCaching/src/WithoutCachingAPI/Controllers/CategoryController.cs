@@ -16,6 +16,7 @@ public class CategoryController : Controller
     }
 
     [HttpGet]
+    [Route("api/[controller]")]
     public async Task<IActionResult> GetAll()
     {
         _logger.LogInformation("GetAll categories called");
