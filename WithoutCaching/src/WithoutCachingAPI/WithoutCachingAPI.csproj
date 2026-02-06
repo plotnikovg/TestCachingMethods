@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\WithoutCachingApplication\WithoutCachingApplication.csproj" />
+    <ProjectReference Include="..\WithoutCachingInfrastructure\WithoutCachingInfrastructure.csproj" />
   </ItemGroup>
 
 </Project>
