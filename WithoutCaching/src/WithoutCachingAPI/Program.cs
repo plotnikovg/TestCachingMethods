@@ -23,6 +23,8 @@ var connectionString =
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(connectionString));
 
+builder.Services.AddScoped<AppDbContextInitializer>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -34,5 +36,12 @@ if (app.Environment.IsDevelopment())
 
 app.MapControllers();
 app.UseHttpsRedirection();
+
+using (var scope = app.Services.CreateScope())
+{
+    var initializer = scope.ServiceProvider.GetRequiredService<AppDbContextInitializer>();
+    await initializer.InitializeAsync();
+    await initializer.SeedAsync();
+}
 
 app.Run();
