@@ -1,5 +1,4 @@
 <Solution>
-  <Folder Name="/CA/" />
   <Folder Name="/InMemoryCaching/" />
   <Folder Name="/InMemoryCaching/src/">
     <Project Path="InMemoryCaching/src/InMemoryCachingAPI/InMemoryCachingAPI.csproj" />
