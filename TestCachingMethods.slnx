@@ -1,5 +1,12 @@
 <Solution>
   <Folder Name="/CA/" />
+  <Folder Name="/InMemoryCaching/" />
+  <Folder Name="/InMemoryCaching/src/">
+    <Project Path="InMemoryCaching/src/InMemoryCachingAPI/InMemoryCachingAPI.csproj" />
+    <Project Path="InMemoryCaching/src/InMemoryCachingApplication/InMemoryCachingApplication.csproj" />
+    <Project Path="InMemoryCaching/src/InMemoryCachingDomain/InMemoryCachingDomain.csproj" />
+    <Project Path="InMemoryCaching/src/InMemoryCachingInfrastructure/InMemoryCachingInfrastructure.csproj" />
+  </Folder>
   <Folder Name="/Solution Items/">
     <File Path="compose.yaml" />
   </Folder>
