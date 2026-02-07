@@ -4,6 +4,8 @@ using InMemoryCachingDomain.Interfaces;
 using InMemoryCachingInfrastructure;
 using InMemoryCachingInfrastructure.Repositories;
 using InMemoryCachingApplication.Products.Queries;
+using InMemoryCachingInfrastructure.Repositories.Cached;
+using Microsoft.Extensions.Caching.Memory;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,8 +16,28 @@ builder.Services.AddMediatR(cfg =>
     cfg.RegisterServicesFromAssembly(typeof(GetProductQuery).Assembly);
 });
 
-builder.Services.AddScoped<IProductRepository, ProductRepository>();
-builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+builder.Services.AddMemoryCache(options =>
+{
+    options.SizeLimit = 96000;
+});
+
+builder.Services.AddScoped<ProductRepository>();
+builder.Services.AddScoped<IProductRepository>(provider =>
+{
+    var repository = provider.GetRequiredService<ProductRepository>();
+    var cache = provider.GetRequiredService<IMemoryCache>();
+    
+    return new CachedProductRepository(repository, cache);
+});
+
+builder.Services.AddScoped<CategoryRepository>();
+builder.Services.AddScoped<ICategoryRepository>(provider =>
+{
+    var repository = provider.GetRequiredService<CategoryRepository>();
+    var cache = provider.GetRequiredService<IMemoryCache>();
+    
+    return new CachedCategoryRepository(repository, cache);
+});
 
 var connectionString =
     builder.Configuration.GetConnectionString("PostgresConnection");
