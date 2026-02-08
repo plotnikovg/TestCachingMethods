@@ -28,7 +28,11 @@ public class CachedProductRepository : IProductRepository
             var products = (await _productRepository.GetProductsRangeByIdAsync(categoryId, firstId, lastId)).ToList();
             
             productsBytes = JsonSerializer.SerializeToUtf8Bytes(products);
-            await _cache.SetAsync($"Products_{categoryId}_{firstId}_{lastId}", productsBytes);
+            
+            var options = new DistributedCacheEntryOptions()
+                .SetSlidingExpiration(TimeSpan.FromSeconds(20));
+            
+            await _cache.SetAsync($"Products_{categoryId}_{firstId}_{lastId}", productsBytes, options);
             
             return products;
         }
@@ -46,7 +50,11 @@ public class CachedProductRepository : IProductRepository
         var product = await _productRepository.GetProductByIdAsync(id);
 
         productBytes = JsonSerializer.SerializeToUtf8Bytes(product);
-        await _cache.SetAsync($"Product_{id}", productBytes);
+        
+        var options = new DistributedCacheEntryOptions()
+            .SetSlidingExpiration(TimeSpan.FromSeconds(20));
+        
+        await _cache.SetAsync($"Product_{id}", productBytes, options);
         
         return product;
     }
