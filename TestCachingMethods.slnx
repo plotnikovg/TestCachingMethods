@@ -1,4 +1,11 @@
 <Solution>
+  <Folder Name="/DistributedCachingRedis/" />
+  <Folder Name="/DistributedCachingRedis/src/">
+    <Project Path="DistributedCachingRedis/src/DistributedCachingRedisAPI/DistributedCachingRedisAPI.csproj" />
+    <Project Path="DistributedCachingRedis/src/DistributedCachingRedisApplication/DistributedCachingRedisApplication.csproj" />
+    <Project Path="DistributedCachingRedis/src/DistributedCachingRedisDomain/DistributedCachingRedisDomain.csproj" />
+    <Project Path="DistributedCachingRedis/src/DistributedCachingRedisInfrastructure/DistributedCachingRedisInfrastructure.csproj" />
+  </Folder>
   <Folder Name="/InMemoryCaching/" />
   <Folder Name="/InMemoryCaching/src/">
     <Project Path="InMemoryCaching/src/InMemoryCachingAPI/InMemoryCachingAPI.csproj" />
