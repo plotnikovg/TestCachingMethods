@@ -22,4 +22,10 @@
     <ProjectReference Include="..\InMemoryCachingInfrastructure\InMemoryCachingInfrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Include="..\..\..\.dockerignore">
+      <Link>.dockerignore</Link>
+    </Content>
+  </ItemGroup>
+
 </Project>
