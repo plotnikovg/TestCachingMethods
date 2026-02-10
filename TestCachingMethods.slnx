@@ -6,6 +6,13 @@
     <Project Path="DistributedCachingRedis/src/DistributedCachingRedisDomain/DistributedCachingRedisDomain.csproj" />
     <Project Path="DistributedCachingRedis/src/DistributedCachingRedisInfrastructure/DistributedCachingRedisInfrastructure.csproj" />
   </Folder>
+  <Folder Name="/HybridCaching/" />
+  <Folder Name="/HybridCaching/src/">
+    <Project Path="HybridCaching/src/HybridCachingAPI/HybridCachingAPI.csproj" />
+    <Project Path="HybridCaching/src/HybridCachingApplication/HybridCachingApplication.csproj" />
+    <Project Path="HybridCaching/src/HybridCachingDomain/HybridCachingDomain.csproj" />
+    <Project Path="HybridCaching/src/HybridCachingInfrastructure/HybridCachingInfrastructure.csproj" />
+  </Folder>
   <Folder Name="/InMemoryCaching/" />
   <Folder Name="/InMemoryCaching/src/">
     <Project Path="InMemoryCaching/src/InMemoryCachingAPI/InMemoryCachingAPI.csproj" />
