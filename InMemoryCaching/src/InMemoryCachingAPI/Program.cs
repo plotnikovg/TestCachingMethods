@@ -18,7 +18,7 @@ builder.Services.AddMediatR(cfg =>
 
 builder.Services.AddMemoryCache(options =>
 {
-    options.SizeLimit = 96000;
+    options.SizeLimit = 16000;
 });
 
 builder.Services.AddScoped<ProductRepository>();
