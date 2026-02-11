@@ -24,7 +24,7 @@ public class AppDbContextInitializer
             {
                 _context.Categories.Add(new Category
                 {
-                    Name = "Category " + i
+                    Name = "Category " + (i + 1)
                 });
             }
             
@@ -34,14 +34,14 @@ public class AppDbContextInitializer
         if (!_context.Products.Any())
         {
             var rand = new Random();
-            for (int i = 0; i < 10000; i++)
+            for (int i = 0; i < 60000; i++)
             {
                 _context.Products.Add(new Product
                 {
-                    Name = "Product " + i,
+                    Name = "Product " + (i + 1),
                     Price = new decimal(Math.Round(rand.NextDouble() * 6600, 2)),
                     CategoryId = rand.Next(1, 61),
-                    Description = "Description of product " + i,
+                    Description = "Description of product " + (i + 1),
                     IsInStock = true
                 });
             }
