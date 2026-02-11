@@ -19,8 +19,8 @@ public class CachedProductRepository : IProductRepository
     {
         var cacheOptions = new HybridCacheEntryOptions
         {
-            Expiration = TimeSpan.FromSeconds(66),
-            LocalCacheExpiration = TimeSpan.FromSeconds(6)
+            Expiration = TimeSpan.FromMilliseconds(25),
+            LocalCacheExpiration = TimeSpan.FromMilliseconds(1)
         };
         
         return await _cache.GetOrCreateAsync(
