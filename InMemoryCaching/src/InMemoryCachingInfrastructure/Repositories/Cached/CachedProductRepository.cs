@@ -23,6 +23,7 @@ public class CachedProductRepository : IProductRepository
             
             var cacheEntryOptions = new MemoryCacheEntryOptions()
                 .SetSize(products.Count())
+                .SetAbsoluteExpiration(TimeSpan.FromSeconds(40))
                 .SetPriority(CacheItemPriority.Low);
             
             _cache.Set($"ProductsList_{categoryId}_{firstId}_{lastId}", products, cacheEntryOptions);
@@ -38,6 +39,7 @@ public class CachedProductRepository : IProductRepository
             product = await _productRepository.GetProductByIdAsync(id);
 
             var cacheEntryOptions = new MemoryCacheEntryOptions()
+                .SetAbsoluteExpiration(TimeSpan.FromSeconds(40))
                 .SetSize(1);
             
             _cache.Set($"Product_{id}", product, cacheEntryOptions);
