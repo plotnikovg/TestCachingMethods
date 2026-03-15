@@ -23,6 +23,9 @@
   <Folder Name="/Solution Items/">
     <File Path="compose.yaml" />
   </Folder>
+  <Folder Name="/WithoutCaching.Tests/">
+    <Project Path="WithoutCaching.Tests\Application.Tests\Application.Tests.csproj" Type="Classic C#" />
+  </Folder>
   <Folder Name="/WithoutCaching/" />
   <Folder Name="/WithoutCaching/src/">
     <Project Path="WithoutCaching/src/WithoutCachingAPI/WithoutCachingAPI.csproj" />
